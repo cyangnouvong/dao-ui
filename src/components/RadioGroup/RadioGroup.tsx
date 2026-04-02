@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./RadioGroup.module.css";
 import { spacing, type SpacingKey } from "../../tokens/spacing";
-import type { ThemeKey } from "../../tokens/colors";
+import type { ThemeKey } from "../../tokens";
 
 type Option = {
   label: string;

@@ -7,7 +7,6 @@ export default defineConfig({
   build: {
     lib: {
       entry: "./src/index.ts",
-      name: "daoUI",
       fileName: "index",
       formats: ["es"],
     },

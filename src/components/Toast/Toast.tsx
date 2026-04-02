@@ -6,7 +6,7 @@ import React, {
   useState,
 } from "react";
 import styles from "./Toast.module.css";
-import type { ThemeKey } from "../../tokens/colors";
+import type { ThemeKey } from "../../tokens";
 
 // ----- Types -----
 

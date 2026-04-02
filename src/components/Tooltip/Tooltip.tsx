@@ -1,6 +1,6 @@
 import React, { useId, useState } from "react";
 import styles from "./Tooltip.module.css";
-import type { ThemeKey } from "../../tokens/colors";
+import type { ThemeKey } from "../../tokens";
 
 type TooltipProps = {
   label: string;

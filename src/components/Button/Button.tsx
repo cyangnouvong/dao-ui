@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import styles from "./Button.module.css";
-import type { ThemeKey } from "../../tokens/colors";
+import type { ThemeKey } from "../../tokens";
 
 type ButtonProps = {
   children: React.ReactNode;

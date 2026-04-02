@@ -13,11 +13,13 @@ export const colors = {
     inkMuted: "#8a8a7c",
     inkFaint: "#aaaaa0",
   },
-  validation: {
-    success: "#4a7c59",
-    error: "#c0392b",
-  },
+} as const;
+
+export const validationColors = {
+  success: "#4a7c59",
+  error: "#c0392b",
 } as const;
 
 export type ThemeKey = keyof typeof colors;
 export type ThemeValues = (typeof colors)[ThemeKey];
+export type ValidationColors = typeof validationColors;

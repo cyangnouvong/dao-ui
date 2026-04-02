@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./Drawer.module.css";
-import type { ThemeKey } from "../../tokens/colors";
+import type { ThemeKey } from "../../tokens";
 
 type DrawerProps = {
   open: boolean;
