@@ -1,12 +1,12 @@
 {
   "name": "@cyangnouvong/dao-ui",
   "version": "1.0.0",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
-    "./styles": "./dist/global.css"
+    ".": "./dist/index.mjs",
+    "./styles": "./dist/index.css"
   },
   "files": [
     "dist"
