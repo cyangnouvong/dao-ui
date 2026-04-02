@@ -1,12 +1,12 @@
 import React, { forwardRef } from "react";
 import styles from "./Button.module.css";
-import type { colors } from "../../tokens/colors";
+import type { ColorsKey } from "../../tokens/colors";
 
 type ButtonProps = {
   children: React.ReactNode;
   onClick?: () => void;
   style?: React.CSSProperties;
-  theme?: keyof typeof colors;
+  theme?: ColorsKey;
   variant?: "primary" | "outline" | "emphasis";
   size?: "sm" | "md" | "lg";
   className?: string;

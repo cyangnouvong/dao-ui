@@ -14,3 +14,6 @@ export const colors = {
     inkFaint: "#aaaaa0",
   },
 } as const;
+
+export type ColorsKey = keyof typeof colors;
+export type ColorsValue = (typeof colors)[ColorsKey];
