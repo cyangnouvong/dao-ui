@@ -9,7 +9,7 @@
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
-    "./styles": "./dist/style.css"
+    "./dist/style.css": "./dist/style.css"
   },
   "files": [
     "dist"
