@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./RadioGroup.module.css";
 import { spacing, type SpacingKey } from "../../tokens/spacing";
+import type { ThemeKey } from "../../tokens/colors";
 
 type Option = {
   label: string;
@@ -13,7 +14,7 @@ type RadioGroupProps<T extends string> = {
   onChange: (value: T) => void;
   direction?: "horizontal" | "vertical";
   gap?: SpacingKey;
-  theme?: "light" | "dark";
+  theme?: ThemeKey;
   size?: "sm" | "md" | "lg";
   className?: string;
   style?: React.CSSProperties;

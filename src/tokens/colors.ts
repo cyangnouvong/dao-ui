@@ -15,5 +15,5 @@ export const colors = {
   },
 } as const;
 
-export type ColorsKey = keyof typeof colors;
-export type ColorsValue = (typeof colors)[ColorsKey];
+export type ThemeKey = keyof typeof colors;
+export type ThemeValues = (typeof colors)[ThemeKey];

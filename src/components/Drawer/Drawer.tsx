@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import styles from "./Drawer.module.css";
+import type { ThemeKey } from "../../tokens/colors";
 
 type DrawerProps = {
   open: boolean;
   onClose: () => void;
   children: React.ReactNode;
   side?: "left" | "right";
-  theme?: "light" | "dark";
+  theme?: ThemeKey;
   hideCloseButton?: boolean;
   className?: string;
   style?: React.CSSProperties;

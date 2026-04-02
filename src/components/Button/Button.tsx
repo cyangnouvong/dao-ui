@@ -1,12 +1,12 @@
 import React, { forwardRef } from "react";
 import styles from "./Button.module.css";
-import type { ColorsKey } from "../../tokens/colors";
+import type { ThemeKey } from "../../tokens/colors";
 
 type ButtonProps = {
   children: React.ReactNode;
   onClick?: () => void;
   style?: React.CSSProperties;
-  theme?: ColorsKey;
+  theme?: ThemeKey;
   variant?: "primary" | "outline" | "emphasis";
   size?: "sm" | "md" | "lg";
   className?: string;
@@ -15,6 +15,7 @@ type ButtonProps = {
   hideArrow?: boolean;
 };
 
+/* forward ref because we might need to directly control the button from the outside */
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
