@@ -1,0 +1,87 @@
+/* ----- Base ----- */
+
+.text {
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- Size ----- */
+
+.size-xs {
+  font-size: var(--text-xs);
+}
+.size-sm {
+  font-size: var(--text-sm);
+}
+.size-base {
+  font-size: var(--text-base);
+}
+.size-lg {
+  font-size: var(--text-lg);
+}
+.size-xl {
+  font-size: var(--text-xl);
+}
+.size-xxl {
+  font-size: var(--text-2xl);
+}
+.size-xxxl {
+  font-size: var(--text-3xl);
+}
+
+/* ----- Font ----- */
+
+.font-display {
+  font-family: var(--font-display);
+}
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+/* ----- Tracking ----- */
+
+.tracking-tight {
+  letter-spacing: var(--tracking-tight);
+}
+.tracking-normal {
+  letter-spacing: var(--tracking-normal);
+}
+.tracking-wide {
+  letter-spacing: var(--tracking-wide);
+}
+.tracking-wider {
+  letter-spacing: var(--tracking-wider);
+}
+
+/* ----- Weight ----- */
+
+.weight-light {
+  font-weight: var(--weight-light);
+}
+.weight-normal {
+  font-weight: var(--weight-normal);
+}
+.weight-medium {
+  font-weight: var(--weight-medium);
+}
+.weight-semibold {
+  font-weight: var(--weight-semibold);
+}
+.weight-bold {
+  font-weight: var(--weight-bold);
+}
+
+/* ----- Color ----- */
+
+.color-ink {
+  color: var(--ink);
+}
+.color-ink-mid {
+  color: var(--ink-mid);
+}
+.color-ink-muted {
+  color: var(--ink-muted);
+}
+.color-ink-faint {
+  color: var(--ink-faint);
+}
