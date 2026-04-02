@@ -30,7 +30,7 @@ const Text = ({
   color = "ink",
   className = "",
   style,
-  theme = "light",
+  theme,
 }: TextProps) => {
   return (
     <Tag

@@ -18,7 +18,7 @@ const Drawer = ({
   onClose,
   children,
   side = "right",
-  theme = "light",
+  theme,
   hideCloseButton = false,
   className = "",
   style,

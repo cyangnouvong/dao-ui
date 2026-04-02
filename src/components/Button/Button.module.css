@@ -63,17 +63,22 @@
 
 /* ----- PRIMARY variant ----- */
 
-.primary {
-  background-color: var(--bg);
-  border: 1px solid var(--bg);
+[data-theme="light"] .primary {
+  background-color: color-mix(in srgb, var(--ink-muted) 30%, transparent);
+  border: 1px solid var(--ink-muted);
+}
+
+[data-theme="dark"] .primary {
+  background-color: color-mix(in srgb, var(--ink-muted) 40%, transparent);
+  border: 1px solid var(--ink-muted);
 }
 
 .primary .btn-front {
-  color: var(--ink-mid);
+  color: var(--ink);
 }
 
 .primary:not(:disabled):hover .btn-front {
-  background-color: color-mix(in srgb, var(--bg), var(--ink) 10%);
+  background-color: color-mix(in srgb, var(--bg), var(--ink) 20%);
 }
 
 /* ----- EMPHASIS variant ----- */

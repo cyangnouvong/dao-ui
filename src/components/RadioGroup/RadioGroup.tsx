@@ -26,7 +26,7 @@ const RadioGroup = <T extends string>({
   onChange,
   direction = "horizontal",
   gap,
-  theme = "light",
+  theme,
   size = "md",
   className = "",
   style,

@@ -22,7 +22,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       onClick,
       style,
-      theme = "light",
+      theme, // inherit theme from parent by default, but can be overridden by props
       variant = "primary",
       size = "md",
       className = "",
