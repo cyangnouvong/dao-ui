@@ -62,14 +62,8 @@
 }
 
 /* ----- PRIMARY variant ----- */
-
-[data-theme="light"] .primary {
-  background-color: color-mix(in srgb, var(--ink-muted) 30%, transparent);
-  border: 1px solid var(--ink-muted);
-}
-
-[data-theme="dark"] .primary {
-  background-color: color-mix(in srgb, var(--ink-muted) 40%, transparent);
+.primary {
+  background-color: var(--ui-background);
   border: 1px solid var(--ink-muted);
 }
 

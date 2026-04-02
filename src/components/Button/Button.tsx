@@ -12,7 +12,7 @@ type ButtonProps = {
   className?: string;
   disabled?: boolean;
   loading?: boolean;
-  hideArrow?: boolean;
+  showArrow?: boolean;
 };
 
 /* forward ref because we might need to directly control the button from the outside */
@@ -27,7 +27,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       size = "md",
       className = "",
       disabled = false,
-      hideArrow = false,
+      showArrow = false,
     },
     ref,
   ) => {
@@ -55,7 +55,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
         <div className={styles["btn-front"]}>
           {children}
-          {!hideArrow && (
+          {showArrow && (
             <span className={styles["arrow"]} aria-hidden="true">
               →
             </span>

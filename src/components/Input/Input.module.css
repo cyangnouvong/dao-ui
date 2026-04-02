@@ -1,0 +1,151 @@
+/* ----- wrapper ----- */
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+}
+
+/* ----- label (underline default) ----- */
+
+.label {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+/* ----- base ----- */
+
+.input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  outline: none;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.input::placeholder {
+  color: var(--ink-faint);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ----- size ----- */
+
+.size-sm {
+  font-size: var(--text-sm);
+  padding: var(--space-1) 0;
+}
+
+.size-md {
+  font-size: var(--text-base);
+  padding: var(--space-2) 0;
+}
+
+.size-lg {
+  font-size: var(--text-lg);
+  padding: var(--space-3) 0;
+}
+
+/* ----- helper / error text ----- */
+
+.error-text {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--validation-error) 70%, var(--ink));
+}
+
+.helper-text {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+}
+
+/* ----- underline ----- */
+
+.variant-underline .input {
+  border-bottom: 1px solid var(--ink-faint);
+}
+
+.variant-underline .input:focus {
+  border-bottom-color: var(--ink-mid);
+}
+
+.variant-underline .input-error {
+  border-bottom-color: color-mix(
+    in srgb,
+    var(--validation-error) 70%,
+    var(--ink)
+  );
+}
+
+.variant-underline .input-error:focus {
+  border-bottom-color: color-mix(
+    in srgb,
+    var(--validation-error) 70%,
+    var(--ink)
+  );
+}
+
+/* ----- outline ------ */
+
+.variant-outline {
+  position: relative;
+  gap: 0;
+}
+
+.variant-outline .label {
+  position: absolute;
+  top: 0;
+  left: var(--space-3);
+  transform: translateY(-50%);
+  background-color: var(--bg);
+  padding: 0 var(--space-1);
+  line-height: 1;
+  z-index: 1;
+  transition: color 0.2s ease;
+}
+
+.variant-outline .input {
+  border: 1px solid var(--ink-faint);
+  border-radius: 0;
+}
+
+.variant-outline .input:focus {
+  border-color: var(--ink-mid);
+}
+
+.variant-outline .input-error {
+  border-color: color-mix(in srgb, var(--validation-error) 70%, var(--ink));
+}
+
+.variant-outline .input-error:focus {
+  border-color: color-mix(in srgb, var(--validation-error) 70%, var(--ink));
+}
+
+/* size padding override for outline */
+
+.variant-outline .size-sm {
+  padding: var(--space-2) var(--space-3);
+}
+
+.variant-outline .size-md {
+  padding: var(--space-3) var(--space-3);
+}
+
+.variant-outline .size-lg {
+  padding: var(--space-4) var(--space-4);
+}

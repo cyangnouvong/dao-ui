@@ -5,6 +5,11 @@
   --ink-muted: #8a8a7c;
   --ink-faint: #aaaaa0;
 
+  --ui-background: color-mix(in srgb, var(--ink-muted) 40%, transparent);
+
+  --validation-success: #4a7c59;
+  --validation-error: #c0392b;
+
   --font-ui: "Inter", sans-serif;
   --font-display: "Cormorant Garamond", serif;
 

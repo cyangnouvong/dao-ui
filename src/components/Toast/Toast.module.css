@@ -1,0 +1,138 @@
+/* ----- Container (portal anchor) ----- */
+
+.toast-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  z-index: 500;
+  pointer-events: none;
+}
+
+/* ----- content ----- */
+
+.toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+
+  background-color: var(--ui-background);
+  border: var(--ui-background);
+  color: var(--ink);
+
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+
+  box-shadow: 0 4px 20px color-mix(in srgb, var(--ink) 20%, transparent);
+
+  padding: var(--space-3) var(--space-4);
+  min-width: 240px;
+  max-width: 360px;
+  pointer-events: auto;
+
+  opacity: 0;
+  transform: translateY(8px);
+  animation: toast-in 0.3s ease forwards;
+}
+
+[data-theme="dark"] .toast {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.toast-exiting {
+  animation: toast-out 0.25s ease forwards;
+}
+
+/* ----- dismiss ----- */
+
+.dismiss {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink);
+  font-size: var(--text-sm);
+  line-height: 1;
+  padding: 0;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.dismiss:hover {
+  color: var(--ink);
+}
+
+/* ----- position ----- */
+
+.position-top-left {
+  top: var(--space-6);
+  left: var(--space-6);
+}
+
+.position-top-right {
+  top: var(--space-6);
+  right: var(--space-6);
+}
+
+.position-bottom-left {
+  bottom: var(--space-6);
+  left: var(--space-6);
+}
+
+.position-bottom-right {
+  bottom: var(--space-6);
+  right: var(--space-6);
+}
+
+/* ----- variants ----- */
+
+.default {
+  border: none;
+}
+
+.success {
+  background-color: color-mix(in srgb, #4a7c59 25%, var(--bg));
+  border-color: color-mix(in srgb, #4a7c59 40%, transparent);
+  color: color-mix(in srgb, #4a7c59 80%, var(--ink));
+  box-shadow: none;
+
+  .dismiss {
+    color: color-mix(in srgb, var(--validation-success) 80%, var(--ink));
+  }
+}
+
+.error {
+  background-color: color-mix(in srgb, var(--validation-error) 25%, var(--bg));
+  border-color: color-mix(in srgb, var(--validation-error) 40%, transparent);
+  color: color-mix(in srgb, var(--validation-error) 80%, var(--ink));
+  box-shadow: none;
+
+  .dismiss {
+    color: color-mix(in srgb, var(--validation-error) 80%, var(--ink));
+  }
+}
+
+/* ----- animations ----- */
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
