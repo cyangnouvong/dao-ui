@@ -1,0 +1,24 @@
+import React from "react";
+import type { ThemeKey } from "../../tokens";
+type InputVariant = "underline" | "outline";
+type InputProps = {
+    label?: string;
+    placeholder?: string;
+    value?: string;
+    defaultValue?: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+    error?: string;
+    helperText?: string;
+    disabled?: boolean;
+    variant?: InputVariant;
+    theme?: ThemeKey;
+    size?: "sm" | "md" | "lg";
+    type?: React.HTMLInputTypeAttribute;
+    name?: string;
+    id?: string;
+    className?: string;
+    style?: React.CSSProperties;
+};
+declare const Input: React.ForwardRefExoticComponent<InputProps & React.RefAttributes<HTMLInputElement>>;
+export default Input;

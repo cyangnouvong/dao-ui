@@ -13,7 +13,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && tsc --project tsconfig.app.json --emitDeclarationOnly --declaration --outDir dist",
+    "prepare": "vite build && tsc --project tsconfig.app.json --emitDeclarationOnly --declaration --outDir dist",
     "preview": "vite preview"
   },
   "peerDependencies": {
