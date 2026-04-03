@@ -3,7 +3,7 @@ import { type SpacingKey } from "../../tokens/spacing";
 import type { ThemeKey } from "../../tokens";
 type DotIndicatorProps = {
     count: number;
-    active: number;
+    active: number | null;
     onChange?: (index: number) => void;
     direction?: "horizontal" | "vertical";
     size?: "sm" | "md" | "lg";
